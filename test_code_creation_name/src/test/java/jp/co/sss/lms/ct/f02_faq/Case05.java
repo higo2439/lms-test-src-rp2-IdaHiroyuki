@@ -195,14 +195,14 @@ public class Case05 {
 	@Order(6)
 	@DisplayName("テスト06 「クリア」ボタン押下で入力したキーワードを消去")
 	void test06() {
-		// キーワード入力欄の要素を取得する
+		// キーワード入力欄の要素を取得する。
 		WebElement searchInput = webDriver.findElement(By.id("form"));
 
 		// 「クリア」ボタンの要素を取得し押下する
 		WebElement clearButton = webDriver.findElement(By.cssSelector("input[type='button'][value='クリア']"));
 		clearButton.click();
 
-		// キーワード入力欄が空になっていることを確認する
+		// キーワード入力欄が空になっていることを確認する。
 		String actualValue = searchInput.getAttribute("value");
 		assertEquals("", actualValue, "クリアボタンクリック後、入力値が空になっていません。");
 
