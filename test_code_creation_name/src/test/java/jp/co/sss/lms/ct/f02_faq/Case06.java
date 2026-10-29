@@ -182,7 +182,7 @@ public class Case06 {
 	@Order(6)
 	@DisplayName("テスト06 検索結果の質問をクリックしその回答を表示")
 	void test06() {
-		// 「キャンセル料・途中退校について」の質問要素を取得し押下する
+		// 「キャンセル料・途中退校について」の質問要素を取得し押下する。
 		WebElement questionElement = webDriver
 				.findElement(By.xpath("//dl[starts-with(@id,'question-h')][.//span[text()='キャンセル料・途中退校について']]"));
 		questionElement.click();
